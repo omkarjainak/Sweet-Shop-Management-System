@@ -1,4 +1,3 @@
-// src/server.ts
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -9,9 +8,11 @@ dotenv.config();
 
 const app = express();
 
-// Enable CORS for frontend origin
+// Enable CORS using env variable
+const frontendUrl = process.env.FRONTEND_URL || "http://localhost:3000";
+
 app.use(cors({
-  origin: "http://localhost:3000", // replace with your frontend URL
+  origin: frontendUrl,
   credentials: true, // if you plan to use cookies
 }));
 
