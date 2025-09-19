@@ -1,6 +1,4 @@
-Here’s a **complete final README.md** for your **Sweet Shop Management System** project, combining both backend and frontend instructions, screenshots, testing, and AI usage sections. You can directly use or adapt it:
 
----
 
 # Sweet Shop Management System (SMS-dashboard)
 
