@@ -126,25 +126,7 @@ npm run dev
 
 ---
 
-## Screenshots
 
-### Home Page
-
-![Home Page](screenshots/home.png)
-
-### Sweet Management (Admin)
-
-![Sweet Management](screenshots/sweet.png)
-
-### User Management (Superadmin)
-
-![User Management](screenshots/users.png)
-
-### Inventory Management
-
-![Inventory Management](screenshots/inventory.png)
-
----
 
 ## Testing
 
