@@ -1,0 +1,29 @@
+omkar@omkar-ThinkBook-15-G3-ACL:~/Desktop/New Folder 3/sweet-shop-management (Copy)/backend$ npm run test
+
+> backend@1.0.0 test
+> jest --coverage
+
+ PASS  src/test/sweet.test.ts
+ PASS  src/test/user.test.ts
+ PASS  src/test/auth.test.ts
+----------------------|---------|----------|---------|---------|--------------------------------
+File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s              
+----------------------|---------|----------|---------|---------|--------------------------------
+All files             |   60.73 |    30.88 |      70 |   60.46 |                                
+ controllers          |   63.54 |    40.47 |   72.72 |   63.29 |                                
+  authControllers.ts  |   86.66 |      100 |     100 |   84.61 | 10,18                          
+  sweetControllers.ts |   53.12 |    36.84 |   57.14 |   52.94 | 30,40,46-50,63,76,82-91,97-106 
+  userControllers.ts  |   82.35 |       75 |     100 |      80 | 19,29,41                       
+ services             |   56.06 |    15.38 |   66.66 |    55.1 |                                
+  authService.ts      |      75 |       50 |     100 |   78.94 | 27-32                          
+  sweetService.ts     |   45.23 |        0 |   57.14 |      40 | 23-38,53-57,62-65              
+ test/_mock_          |     100 |      100 |     100 |     100 |                                
+  prismaClient.ts     |     100 |      100 |     100 |     100 |                                
+----------------------|---------|----------|---------|---------|--------------------------------
+
+Test Suites: 3 passed, 3 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        4.404 s
+Ran all test suites.
+omkar@omkar-ThinkBook-15-G3-ACL:~/Desktop/New Folder 3/sweet-shop-management (Copy)/backend$ 

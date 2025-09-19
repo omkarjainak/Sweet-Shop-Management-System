@@ -1,0 +1,81 @@
+###########################################
+# 1. Register User (Admin)
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "admin123",
+  "email": "admin123@example.com",
+  "password": "adminpassword123",
+  "role": "admin"
+}
+
+###########################################
+# 2. Login User
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin123@example.com",
+  "password": "adminpassword123"
+}
+
+###########################################
+# 3. Add Sweet (Admin only)
+POST http://localhost:5000/api/sweets
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU4MjUxMDMzLCJleHAiOjE3NTgzMzc0MzN9.7ZulLUnoKW51NV52lgKOMQx9n9qnu84u6da8CttJ4Nk
+
+{
+  "name": "Chocolate Bar",
+  "category": "Chocolate",
+  "price": 50,
+  "quantity": 100
+}
+
+###########################################
+# 4. Get All Sweets (Public)
+GET http://localhost:5000/api/sweets
+Content-Type: application/json
+
+###########################################
+# 5. Search Sweets (Public)
+GET http://localhost:5000/api/sweets/search?name=Chocolate &category=Chocolate
+Content-Type: application/json
+
+###########################################
+# 6. Update Sweet (Admin only)
+PUT http://localhost:5000/api/sweets/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU4MTk3NjY3LCJleHAiOjE3NTgyODQwNjd9.7rYBTO8NUlSqTZbUgVLDX1NEHZy03OArAs6J97JZLPQ
+
+{
+  "price": 55,
+  "quantity": 120
+}
+
+###########################################
+# 7. Delete Sweet (Admin only)
+DELETE http://localhost:5000/api/sweets/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU4MjUxMDMzLCJleHAiOjE3NTgzMzc0MzN9.7ZulLUnoKW51NV52lgKOMQx9n9qnu84u6da8CttJ4Nk
+
+###########################################
+# 8. Purchase Sweet (Protected)
+POST http://localhost:5000/api/sweets/2/purchase
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU4MjUxMDMzLCJleHAiOjE3NTgzMzc0MzN9.7ZulLUnoKW51NV52lgKOMQx9n9qnu84u6da8CttJ4Nk
+
+{
+  "quantity": 2
+}
+
+###########################################
+# 9. Restock Sweet (Admin only)
+POST http://localhost:5000/api/sweets/1/restock
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU4MTk3NjY3LCJleHAiOjE3NTgyODQwNjd9.7rYBTO8NUlSqTZbUgVLDX1NEHZy03OArAs6J97JZLPQ
+
+{
+  "quantity": 50
+}
