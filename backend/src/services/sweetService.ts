@@ -50,12 +50,20 @@ export const deleteSweet = async (id: number) => {
 
 // Purchase sweet
 export const purchaseSweet = async (id: number, quantity: number) => {
-  const sweet = await prisma.sweet.findUnique({ where: { id } });
-  if (!sweet) throw new Error("Sweet not found");
-  if (sweet.quantity < quantity) throw new Error("Insufficient stock");
+  return prisma.$transaction(async (tx) => {
+    const sweet = await tx.sweet.findUnique({ where: { id }, select: { id: true, quantity: true } });
+    if (!sweet) throw new Error("Sweet not found");
+    if (sweet.quantity < quantity) throw new Error("Insufficient stock");
 
-  return prisma.sweet.update({ where: { id }, data: { quantity: sweet.quantity - quantity } });
+    return tx.sweet.update({
+      where: { id },
+      data: {
+        quantity: { decrement: quantity }, // atomic decrement
+      },
+    });
+  });
 };
+
 
 // Restock sweet
 export const restockSweet = async (id: number, quantity: number) => {
