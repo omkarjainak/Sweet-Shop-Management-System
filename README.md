@@ -150,18 +150,39 @@ npm run test
 
 ## My AI Usage
 
-I used **ChatGPT (OpenAI)** as a development assistant. Specifically:
 
-* **Code Templates & Boilerplate**
-  Generated frontend/backend structure, React components, API routes.
-* **Feature Implementation Guidance**
-  Assisted with JWT authentication, role-based access, and REST APIs.
-* **Debugging & Error Fixes**
-  Provided solutions for React Hooks, ESLint, Vite/CRA, and API issues.
-* **Documentation**
-  Helped draft README, setup instructions.
+I used ChatGPT (OpenAI) extensively throughout the development of the Sweet Shop Management System. Specifically, ChatGPT helped me in the following ways:
 
-> All code logic, testing, and integration were reviewed and manually verified by me.
+1. Code Generation & Boilerplate
+
+Generated backend and frontend folder structure with proper separation of concerns (controllers, services, routes, and React components).
+
+Created TypeScript interfaces and types for Express requests and Prisma models.
+
+Set up Prisma schema for PostgreSQL with User and Sweet models.
+
+Generated React components for the UI using Ant Design, including forms, tables, and modals.
+
+2. Feature Implementation Guidance
+
+Guided JWT authentication implementation for users, admins, and superadmins.
+
+Helped implement role-based access control middleware (authenticateJWT, authorizeAdmin, authorizeSuperAdmin).
+
+Assisted in building CRUD APIs for sweets (add, update, delete, search, and list).
+
+Advised on purchase and restock logic, including validation of quantity and stock.
+
+3. Debugging & Fixes
+
+Fixed TypeScript errors related to req.user and Prisma type issues.
+
+Solved Prisma migration problems and database synchronization issues.
+
+Assisted with React warnings and errors (useEffect dependencies, JSX issues, Ant Design component usage).
+
+Provided solutions for API errors, including proper request validation and error handling.
+
 
 ---
 ## Screenshot
