@@ -64,7 +64,7 @@ cp .env.example .env
 
 ```env
 PORT=5000
-DATABASE_URL="postgresql://user:pass@localhost:5432/sweetshop"
+DATABASE_URL=postgress url
 JWT_SECRET=your_jwt_secret
 FRONTEND_URL=http://localhost:5173
 ```
