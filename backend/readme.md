@@ -102,9 +102,8 @@ This will create a **superadmin user** if it doesn’t exist yet.
 
 7. **Start the backend**
 
-```bash
-npm run dev
-```
+    npx tsc
+    node dist/server.js
 
 The server will start at [http://localhost:5000](http://localhost:5000).
 
