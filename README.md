@@ -92,7 +92,9 @@ Default credentials:
 7. Start backend server:
 
 ```bash
-npm run dev
+    npx tsc
+    node dist/server.js
+
 ```
 
 Backend runs on: `http://localhost:5000`
@@ -116,9 +118,7 @@ npm install
 3. Start frontend development server:
 
 ```bash
-    npx tsc
-    node dist/server.js
-
+npm run dev
 ```
 
 * If using Vite: `http://localhost:5173/`
