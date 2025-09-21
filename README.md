@@ -116,7 +116,9 @@ npm install
 3. Start frontend development server:
 
 ```bash
-npm run dev
+    npx tsc
+    node dist/server.js
+
 ```
 
 * If using Vite: `http://localhost:5173/`
